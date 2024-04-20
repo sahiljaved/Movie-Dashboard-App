@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 // import './App.css'
 import Allroutes from './Pages/Allroutes';
+
 function App() {
-  
   return (
     <>
-      <Allroutes/>
+      <Allroutes />
      </>
   )
 }
 
 export default App
+
+//update
