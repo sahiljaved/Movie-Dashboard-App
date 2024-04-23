@@ -55,7 +55,7 @@ const Home = () => {
 
       const apiKey = "ef788098";
       const response = await axios.get(
-        `http://www.omdbapi.com/?s=${debouncedSearchTerm}&apikey=${apiKey}`
+        `https://www.omdbapi.com/?s=${debouncedSearchTerm}&apikey=${apiKey}`
         
       );
 
@@ -64,7 +64,7 @@ const Home = () => {
         const detailedMovieData = await Promise.all(
           movieResults.map(async (movie) => {
             const detailedResponse = await axios.get(
-              `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=${apiKey}`
+              `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${apiKey}`
             );
             return detailedResponse.data;
           })
